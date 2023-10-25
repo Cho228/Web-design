@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ua">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Benefit calculation</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div id="loader" class="loader disabled">
+		<div class="loader__container">
+			<img class="loader__img" src="img/loader.png" alt="Sunny/Rainy">
+			<div class="center">
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+				<div class="wave"></div>
+			</div>
+		</div>
+	</div>
+
+	<section id="greetings" class="greetings">
+		<div class="greetings__heading">How it's going today, dude?</div>
+		<a id="btn-ok" href="#space" class="btn greeting__btn btn-ok">I'm great!</a>
+		<a id="btn-norm" href="#space" class="btn greeting__btn btn-norm">Not bad, you know</a>
+		<a id="btn-bad" href="#space" class="btn greeting__btn btn-bad">Honestly? I'm so exshausted</a>
+	</section>
+	<div id="space" class="space"></div>
+	<section id="main" class="main">
+		<div id="main__heading" class="main__heading hidden">Tbh with you I don't care what is your feelings because now
+			it'll be mooooore better ;)</div>
+		<div id="main__start" class="main__start hidden">OK, let's start!</div>
+		<div id="main-content" class="content">
+			<div class="table__wrapper hidden">
+				<table class="rates">
+					<tr>
+						<th>Very well</th>
+						<td>10</td>
+					</tr>
+					<tr>
+						<th>Great</th>
+						<td>8</td>
+					</tr>
+					<tr>
+						<th>Can be</th>
+						<td>5</td>
+					</tr>
+					<tr>
+						<th>Bad</th>
+						<td>3</td>
+					</tr>
+					<tr>
+						<th>Bad af</th>
+						<td>1</td>
+					</tr>
+				</table>
+			</div>
+
+			<div class="input">
+				<div class="input__content hidden">
+					<div class="rainpercent">
+						<div class="heading">Please select the possibility of rain</div>
+						<input id="range" type="range" class="range" min="0" max="100">
+						<input type="text" class="rain" id="range_value" value="">
+					</div>
+
+					<div class="input__heading">Please, answer the questions below by grades from the table</div>
+					<div class="rainy">
+						<div class="rainy__heading1">How do you feel when you at home while it's raining?</div>
+						<input value="1" type="text" id="rainyhome" class="rainyhome" placeholder="What is your grade for this case?">
+						<div class="rainy__heading2">And when you in a forest?</div>
+						<input value="1" type="text" id="rainyforest" class="rainyforest" placeholder="What is your grade for this case?">
+					</div>
+
+					<div class="sunny">
+						<div class="sunny__heading1">How do you feel when you at home while it's sunny?</div>
+						<input value="1" type="text" id="sunnyhome" class="sunnyhome" placeholder="What is your grade for this case?">
+						<div class="sunny__heading2">And when you in a forest?</div>
+						<input value="1" type="text" id="sunnyforest" class="sunnyforest" placeholder="What is your grade for this case?">
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="calculate" class="btn calculate hidden">Calculate benefits</div>
+	</section>
+
+	<section id="result-section" class="result-section disabled">
+		<div id="result" class="result__heading"></div>
+
+		<div id="benefit-home" class="benefit"></div>
+		<div id="benefit-forest" class="benefit"></div>
+		
+		<img id="result-img" class="result__img" src="img/loader.png" alt="">
+		<div id="result-btn" class="btn btn-result">GO!!!</div>
+	</section>
+</body>
+<noscript>It's not my fault that you use Browser Explorer and some of my functions don't work properly on you
+	PC</noscript>
+<script src="script.js"></script>
+
+</html>
